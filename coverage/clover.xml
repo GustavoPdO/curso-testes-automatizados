@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1642711689525" clover="3.2.0">
-  <project timestamp="1642711689525" name="All files">
+<coverage generated="1643112888081" clover="3.2.0">
+  <project timestamp="1643112888082" name="All files">
     <metrics statements="52" coveredstatements="47" conditionals="18" coveredconditionals="16" methods="17" coveredmethods="15" elements="87" coveredelements="78" complexity="0" loc="52" ncloc="52" packages="1" files="3" classes="3"/>
     <file name="array.js" path="/Users/vntguvo/Study/venturus-training/test/curso-testes-automatizados/Aula 2/array.js">
       <metrics statements="24" coveredstatements="19" conditionals="8" coveredconditionals="6" methods="9" coveredmethods="7"/>

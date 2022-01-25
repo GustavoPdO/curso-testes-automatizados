@@ -3,17 +3,17 @@ const StringManipulations = require("./atividade1");
 let stringM = {};
 let baseString;
 
-describe("StringManipulations class test", () => {
+describe("String Manipulations class test", () => {
   beforeAll(() => {
     baseString =
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. consectetur luctus urna, vehicula gravida nibh cursus ac.";
+      "Condomínio GlobalTech - Estrada Giuseppina Vianelli Vianelli di Napolli, 1185 - Polo II de Alta Tecnologia, Campinas - SP, 13086-530, Brazil";
     stringM = new StringManipulations(baseString);
   });
 
   describe("findFirstMatch function test", () => {
     it("Should return the substring when there is match", () => {
-      const output = "consectetur";
-      const input = "consectetur";
+      const output = "GlobalTech";
+      const input = "GlobalTech";
 
       const actual = stringM.findFirstMatch(input);
 
@@ -22,7 +22,7 @@ describe("StringManipulations class test", () => {
 
     it("Should return an empty string when there is no match", () => {
       const output = "";
-      const input = "match";
+      const input = "CPQC";
 
       const actual = stringM.findFirstMatch(input);
 
@@ -32,8 +32,8 @@ describe("StringManipulations class test", () => {
 
   describe("findLastMatch function test", () => {
     it("Should return the substring when there is match", () => {
-      const output = "consectetur";
-      const input = "consectetur";
+      const output = "Vianelli";
+      const input = "Vianelli";
 
       const actual = stringM.findLastMatch(input);
 
@@ -52,9 +52,10 @@ describe("StringManipulations class test", () => {
 
   describe("substringBetweenMatches function test", () => {
     it("Should return the substring between the two matches", () => {
-      const output = " ipsum dolor sit amet, consectetur adipiscing ";
-      const firstInput = "Lorem";
-      const secondInput = "elit";
+      const output =
+        " - Estrada Giuseppina Vianelli Vianelli di Napolli, 1185 - Polo II de Alta Tecnologia, ";
+      const firstInput = "Condomínio GlobalTech";
+      const secondInput = "Campinas - SP, 13086-530, Brazil";
 
       const actual = stringM.substringBetweenMatches(firstInput, secondInput);
 
@@ -64,7 +65,7 @@ describe("StringManipulations class test", () => {
     it("Should return an empty string when the first input does not match", () => {
       const output = "";
       const firstInput = "match";
-      const secondInput = "elit";
+      const secondInput = "Campinas - SP, 13086-530, Brazil";
 
       const actual = stringM.substringBetweenMatches(firstInput, secondInput);
 
@@ -73,7 +74,7 @@ describe("StringManipulations class test", () => {
 
     it("Should return an empty string when the second input does not match", () => {
       const output = "";
-      const firstInput = "Lorem";
+      const firstInput = "Condomínio GlobalTech";
       const secondInput = "match";
 
       const actual = stringM.substringBetweenMatches(firstInput, secondInput);
@@ -94,7 +95,7 @@ describe("StringManipulations class test", () => {
 
   describe("both_ends function test", () => {
     it("Should return the first and last 2 chars from the original string", () => {
-      const output = "Loc.";
+      const output = "Coil";
 
       const actual = stringM.both_ends();
 
